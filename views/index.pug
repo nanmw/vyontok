@@ -7,13 +7,14 @@ html(lang='en')
     header.page-header
       include _main-nav
       .hero 
-        .hero__bg
+        //- .hero__bg
         .hero__video 
-          video(autoplay loop muted plays-inline)
-            source(src='/video/hero-background-video.mp4' type='video/mp4')
+          video#myVideo(preload="auto" autoplay loop muted plays-inline)
+            source(src='/video/hero-background-video.webm' type='video/webm')
+        .hero__mesh
         .hero__content
           h1 LEADERS IN QUALITY CONSTRUCTION AND INFRASTRUCTURE IN NIGERIA
-          button 
+          a#scrollToServicesBtn(href='#servicesSection') 
             svg#Layer_2(height='50' viewbox='0 0 512 512' width='50' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' data-name='Layer 2' version='1.1' xmlns:svgjs='http://svgjs.dev/svgjs')
               g(width='100%' height='100%' transform='matrix(1,0,0,1,0,0)')
                 lineargradient#linear-gradient(gradientunits='userSpaceOnUse' x1='43.95' x2='468.05' y1='43.95' y2='468.05')
@@ -29,7 +30,7 @@ html(lang='en')
                     path(d='m416 192h-96l-64 64-64-64h-96l160 160z' fill='#ffffff' fill-opacity='1' data-original-color='#ffffffff' stroke='none' stroke-opacity='1')
 
     main  
-      section.services-section
+      section#servicesSection.services-section
         .container 
           header 
             h2 SERVICES 
@@ -38,23 +39,23 @@ html(lang='en')
             ul.services
               li.service
                 .service__img 
-                  img(src='/img/services/preconstruction-planning.jpg' alt='preconstruction planning')
+                  img(loading='lazy' src='/img/services/preconstruction-planning.jpg' alt='preconstruction planning')
                 .service__content 
                   h3 Preconstruction Planning
                   p Preconstruction planning information should be here.
               li.service
                 .service__img 
-                  img(src='/img/services/architectural-modelling.jpg' alt='architectural modelling')
+                  img(loading='lazy' src='/img/services/architectural-modelling.jpg' alt='architectural modelling')
                 .service__content 
                   h3 Architectural Modelling
                   p Architectural modelling information should be here.
               li.service
                 .service__img 
-                  img(src='/img/services/construction-management.jpg' alt='construction management')
+                  img(loading='lazy' src='/img/services/construction-management.jpg' alt='construction management')
                 .service__content 
                   h3 Construction Management
                   p Information on construction management should be here.
-      section.about-section 
+      section#aboutSection.about-section 
         .container 
           .about-section__info.about-section__item
             .about-content
@@ -66,57 +67,63 @@ html(lang='en')
               p
                 | At the core of our project delivery is technical excellence, utilising the latest building methods, innovations and technology to ensure we offer the best value for our clients. We are at the heart of modern Nigeria, helping the economy to grow by designing, maintaining and transforming the nation’s strategic assets.
           .about-section__background.about-section__item
+            .about-section__background-box.active
+              img(loading='lazy' src='/img/background/about-background-v1.jpg')
             .about-section__background-box
-              img(src='/img/background/about-background.jpg')
+              img(loading='lazy' src='/img/background/about-background.jpg')
+            .about-section__background-box
+              img(loading='lazy' src='/img/background/about-background-v2.jpg')
+            .about-section__background-box
+              img(loading='lazy' src='/img/background/about-background-v3.jpg')
       section.award-section 
         .container 
           .awards 
             .award
-              .award__figure 
+              .award__figure.scroll-up-animated--awards
                 span 2020
-              .award__title
+              .award__title.scroll-up-animated--awards
                 span Year
                 span Estabished
-            .seperator 
+            .seperator.scroll-up-animated--awards
             .award
-              .award__figure 
+              .award__figure.scroll-up-animated--awards
                 span 206
-              .award__title
+              .award__title.scroll-up-animated--awards
                 span Projects
                 span Completed
-            .seperator 
+            .seperator.scroll-up-animated--awards 
             .award
-              .award__figure 
+              .award__figure.scroll-up-animated--awards 
                 span 870
-              .award__title
+              .award__title.scroll-up-animated--awards
                 span Contractors
                 span Appointed
-            .seperator 
+            .seperator.scroll-up-animated--awards 
             .award
-              .award__figure 
+              .award__figure.scroll-up-animated--awards 
                 span 26
-              .award__title
+              .award__title.scroll-up-animated--awards
                 span Awards
                 span Won
-      section.projects-section 
+      section#projectsSection.projects-section 
         .container 
           header 
             h2 PROJECTS 
             span
           .projects-box 
             ul.projects
-              li.project
-                img(src='/img/projects/project-1.jpeg' alt='project-1')
-              li.project
-                img(src='/img/projects/project-2.jpeg' alt='project-2')
-              li.project
-                img(src='/img/projects/project-3.jpeg' alt='project-3')
-              li.project
-                img(src='/img/projects/project-4.jpeg' alt='project-4')
-              li.project
-                img(src='/img/projects/project-5.jpeg' alt='project-5')
-              li.project
-                img(src='/img/projects/project-6.jpeg' alt='project-6')
+              li.project.projects-set--1.scroll-up-animated--projects
+                img(loading='lazy' src='/img/projects/project-1.jpeg' alt='project-1')
+              li.project.projects-set--1.scroll-up-animated--projects
+                img(loading='lazy' src='/img/projects/project-2.jpeg' alt='project-2')
+              li.project.projects-set--2.scroll-up-animated--projects
+                img(loading='lazy' src='/img/projects/project-3.jpeg' alt='project-3')
+              li.project.projects-set--2.scroll-up-animated--projects
+                img(loading='lazy' src='/img/projects/project-4.jpeg' alt='project-4')
+              li.project.projects-set--3.scroll-up-animated--projects
+                img(loading='lazy' src='/img/projects/project-5.jpeg' alt='project-5')
+              li.project.projects-set--3.scroll-up-animated--projects
+                img(loading='lazy' src='/img/projects/project-6.jpeg' alt='project-6')
       section.clients-section 
         .container
           header 
@@ -283,7 +290,7 @@ html(lang='en')
                 path(d='M147.682 132.322c-.316.951-.633 1.9-1.582 2.85-.316.635-.635.951-1.268 1.268-.316.316-.949.633-1.584.633v-.633c.316-.316.316-.633.316-.949 0-.951-.316-1.584-.949-2.217-.316-.316-.951-.635-1.9-.635-.633 0-1.266.318-1.9.951-.633.633-.949 1.582-.949 2.217 0 .949.316 1.9.949 2.533.635.633 1.268 1.268 1.9 1.268 2.533.316 4.434 0 5.701-1.584.633-.635 1.266-1.268 1.9-2.217.633-.949.949-1.9 1.266-2.85l6.65-15.52c.316-.316.316-.949.635-1.266.316-.316.633-.951.949-1.268.316 0 .633-.316.949-.316h.635v-2.217h-7.918v2.217h.633c.635 0 .951 0 1.584.316.316 0 .633.633.633 1.268 0 .949-.316 1.584-.633 2.217l-2.85 6.967-4.117-8.551c0-.316 0-.633-.316-.949v-.951c.316 0 .316-.316.633-.316h1.268v-2.217h-10.451v2.217h.633c.633 0 .951 0 1.268.316 0 .316.316.633.316.951l7.599 16.467zM57.742 140.873h1.267c.634 0 .95 0 1.584.318 0 0 .316 0 .316.316l.316.316v19c0 .635-.316 1.268-.316 1.9 0 .316 0 .635-.316.635-.317.316-.317.316-.634.316h-2.216v1.9h12.351v-1.9h-2.217c-.633-.316-.95-.635-.95-.951v-9.5h8.551v9.183c0 .316 0 .316-.317.633 0 .318-.316.318-.633.318-.95.316-1.583.316-2.217.316v1.9h12.352v-1.9c-.95 0-1.9 0-2.851-.316-.316 0-.634-.318-.634-.635v-19.319-1.266c0-.633.317-.949.634-1.268h2.533v-1.9H72.309v1.9h1.584c.316 0 .633 0 .633.318.317 0 .633 0 .633.316.317 0 .317.316.317.633v8.551h-8.551v-7.602-.949c0-.316 0-.633.317-.949 0 0 .316-.318.633-.318H70.092v-1.9h-12.35v1.904z' fill-rule='evenodd' clip-rule='evenodd' fill='#e5b23a')
                 path(d='M92.895 166.209c2.217 0 4.434-.949 6.018-2.533s2.533-3.801 2.533-6.65c0-2.852-.949-5.068-2.533-6.65-1.584-1.9-3.801-2.535-6.018-2.535-2.534 0-4.434.635-6.334 2.217-1.583 1.9-2.534 4.117-2.534 6.652 0 2.85.634 5.066 2.534 6.967 1.583 1.583 3.8 2.532 6.334 2.532zm-.318-16.785c.951 0 1.584.316 1.901.951.316.316.95.949.95 1.898.317.635.317 1.584.633 2.535v4.115c-.316.951-.316 1.9-.633 2.535 0 .949-.316 1.582-.633 1.9-.633.633-1.267.949-1.9.949-.634 0-1.583-.316-1.9-.633-.634-.635-.95-1.268-.95-1.9-.317-.951-.634-1.584-.634-2.533v-2.217-2.217c0-.951.317-1.584.634-2.535 0-.633.316-1.266.95-1.898.316-.634.949-.95 1.582-.95zM103.346 150.375v10.449c0 .635 0 1.268.316 1.9 0 .635.316 1.268.633 1.9.635.635.951.951 1.584 1.268.633 0 1.268.316 1.9.316 1.9 0 3.482-.633 4.434-2.217.633-1.268.949-2.85.949-4.75v-.318h-1.582c.316.635 0 1.584-.318 2.535 0 .633-.316.949-.633 1.266s-.633.635-.949.635c-.635 0-1.268-.635-1.268-1.268V150.374h4.117v-2.219h-4.117v-7.283h-2.217c0 1.9-.633 3.484-1.266 4.75-.635 1.584-1.9 2.217-3.801 2.852v1.9h2.218v.001zM131.215 157.342c0-2.85-.635-5.385-1.9-6.967-1.268-1.9-3.168-2.535-5.701-2.535-2.217 0-4.117.635-6.018 2.217-1.582 1.9-2.533 4.117-2.533 6.969 0 1.266 0 2.533.635 3.482 0 .635.316 1.268.633 1.9.316.316.633.951.949 1.268 1.9 1.584 3.801 2.533 6.018 2.533 3.801 0 6.65-1.9 7.918-5.701l-1.268-.949c-.633 1.266-1.268 2.217-1.9 3.166-.949.635-1.9 1.268-2.85 1.268-1.9 0-3.168-.951-3.801-2.217-.633-1.268-.949-2.852-.949-4.434h10.767zm-10.768-1.901c0-1.268.316-2.533.633-3.801.316-.633.633-1.266.949-1.584.635-.316.951-.633 1.584-.633.635 0 .951.316 1.268.633.633 0 .633.635.949.951s.316.949.316 1.584v2.217c0 .317-.316.316-.316.316-.633.316-.949.316-1.266.316h-4.117v.001zM131.215 140.557h1.584c.314 0 .314.316.633.316l.316.318c0 .316.316.633.316.949V162.407c0 .633-.316.951-.316.951-.316.316-.635.316-.949.316h-1.268v1.9h9.816v-1.9H139.765c-.316 0-.316 0-.635-.316l-.316-.318v-.949V138.34l-7.6.633v1.584h.001z' fill-rule='evenodd' clip-rule='evenodd' fill='#e5b23a')
                 path(d='M34.306 17.364h124.143c5.068 0 9.184 3.8 9.184 8.867v139.978c0 5.066-4.115 9.184-9.184 9.184H34.306c-5.067 0-9.184-4.117-9.184-9.184V26.231c.001-5.067 4.117-8.867 9.184-8.867' fill='none' stroke='#e5b23a' stroke-width='2.199' stroke-miterlimit='2.613')
-      section.contact-section 
+      section#contactSection.contact-section 
         .container
           header 
             h2 CONTACT 
@@ -302,10 +309,10 @@ html(lang='en')
             h3 Contact Us
             .contact-container
               .contact-form.contact
-                form()
+                form#contactForm()
                   .form-item 
-                    //- label(for="first-name") Your Name                   
-                    input#first-name(type='text' placeholder='Your Name') 
+                    //- label(for="firstName") Your Name                   
+                    input#firstName(type='text' placeholder='Your Name') 
                   .form-item 
                     //- label(for="email") Email Address        
                     input#email(type='email' placeholder='Email Address' aria-required='true')
@@ -331,4 +338,5 @@ html(lang='en')
                 a(href='mailto:info@vyontokprojects.com') info@vyontokprojects.com
                 p Tel: 07082327993, 07018409064 ,08033153538
     include _footer
+    script(src='/js/bundle.js')
     

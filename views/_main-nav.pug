@@ -5,22 +5,22 @@ nav.nav
   div.menu-box
     ul.nav__menu
       li.menu-item
-        a.menu-item__link(href='/')
+        a#homeLink.menu-item__link(href='/')
           | HOME
       li.menu-item
-        a.menu-item__link(href='/services')
+        a#servicesLink.menu-item__link(href='#servicesSection')
           | SERVICES
       li.menu-item
-        a.menu-item__link(href='/about')
+        a#aboutLink.menu-item__link(href='#aboutSection')
           | ABOUT
       li.menu-item
-        a.menu-item__link(href='/projects')
+        a#projectsLink.menu-item__link(href='#projectsSection')
           | PROJECTS
+      //- li.menu-item
+      //-   a#newsLink.menu-item__link(href='/news')
+      //-     | NEWS
       li.menu-item
-        a.menu-item__link(href='/news')
-          | NEWS
-      li.menu-item
-        a.menu-item__link(href='/contact')
+        a#contactLink.menu-item__link(href='#contactSection')
           | CONTACT
     .nav__other
       .search-box 
