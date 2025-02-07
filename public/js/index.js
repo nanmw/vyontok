@@ -41,7 +41,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const contactSectionEl = document.getElementById('contactSection');
   const projectsSet1Els = document.querySelectorAll('.projects-set--1');
   const projectsSet2Els = document.querySelectorAll('.projects-set--2');
-  const projectsSet3Els = document.querySelectorAll('.projects-set--3');
 
   meshEl.style.display = 'none';
 
@@ -84,13 +83,30 @@ document.addEventListener('DOMContentLoaded', function () {
     scrollTo(contactLinkEl, contactSectionEl);
   }
 
+  // if (servicesSectionEl) {
+  //   const observer = new IntersectionObserver(entries => {
+  //     entries.forEach(entry => {
+  //       if (entry.isIntersecting) {
+  //         const aboutSectionBgEl = document.querySelector('.about-section__background ');
+  //         aboutSectionBgEl.classList.add('slide-up');
+  //         observer.unobserve(entry.target);
+  //       }
+  //     });
+  //   });
+
+  //   observer.observe(servicesSectionEl);
+  // }
+
+  // Awards animation
   if (awardSectionEl) {
     const awardsArray = [...scrollUpAnimatedAwardsEls];
     awardsArray.push(awardSectionEl);
     intersectionObserver(awardsArray);
   }
 
-  intersectionObserver(projectsSet1Els);
-  intersectionObserver(projectsSet2Els);
-  intersectionObserver(projectsSet3Els);
+  // Projects animation
+  if (projectsSectionEl) {
+    intersectionObserver(projectsSet1Els);
+    intersectionObserver(projectsSet2Els);
+  }
 });
