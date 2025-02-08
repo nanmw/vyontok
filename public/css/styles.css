@@ -295,6 +295,54 @@ section > .container > header {
   background-color: #0055b3;
 }
 
+.page-header .nav .menu-box .toggler-box {
+  display: none;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.toggler-box .menu__open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 10rem;
+}
+
+.menu__open #group-open-btn .cc {
+  transition: all 0.3s ease-in-out;
+}
+
+.menu__open #group-open-btn .ss,
+.menu__open #group-open-btn .ee,
+.menu__open #group-open-btn .ww,
+.menu__open #group-open-btn .nn {
+  transition: all 0.5s ease-in-out;
+}
+
+.nav-open .menu__open #group-open-btn .cc {
+  fill: transparent;
+}
+
+.nav-open .menu__open #group-open-btn .ss {
+  transform: scale(0.75) translate(27px, 47px);
+}
+
+.nav-open .menu__open #group-open-btn .ee {
+  transform: scale(0.75) translate(47px, 47px);
+}
+
+.nav-open .menu__open #group-open-btn .nn {
+  transform: scale(0.75) translate(47px, 27px);
+}
+
+.nav-open .menu__open #group-open-btn .ww {
+  transform: scale(0.75) translate(27px, 27px);
+}
+
 .hero {
   position: relative;
   width: 100%;

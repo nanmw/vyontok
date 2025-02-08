@@ -25,6 +25,10 @@ function scrollTo(clickedEl, viewEl) {
 
 
 document.addEventListener('DOMContentLoaded', function () {
+  /******************************** ELEMENTS ********************************/
+  const navEl = document.querySelector(".nav");
+  const navLogoEl = document.querySelector(".nav__logo");
+  const menuTogglerEl = document.querySelector(".toggler-box");
   const videoEl = document.getElementById('myVideo');
   const meshEl = document.querySelector('.hero__mesh');
   const awardSectionEl = document.querySelector('.award-section');
@@ -41,6 +45,18 @@ document.addEventListener('DOMContentLoaded', function () {
   const contactSectionEl = document.getElementById('contactSection');
   const projectsSet1Els = document.querySelectorAll('.projects-set--1');
   const projectsSet2Els = document.querySelectorAll('.projects-set--2');
+
+  /*****************************************************************************************/
+  /******************************** NAVIGATION TOGGLE ********************************/
+  // Menu toggle implementation
+  menuTogglerEl.addEventListener("click", () => {
+    console.log("clicked");
+    const pageHeaderEl = document.querySelector(".page-header");
+    pageHeaderEl.classList.toggle("nav-open");
+    navEl.classList.toggle("unblur");
+
+    navLogoEl.classList.add("bring-forward");
+  });
 
   meshEl.style.display = 'none';
 
@@ -82,20 +98,6 @@ document.addEventListener('DOMContentLoaded', function () {
   if (contactLinkEl) {
     scrollTo(contactLinkEl, contactSectionEl);
   }
-
-  // if (servicesSectionEl) {
-  //   const observer = new IntersectionObserver(entries => {
-  //     entries.forEach(entry => {
-  //       if (entry.isIntersecting) {
-  //         const aboutSectionBgEl = document.querySelector('.about-section__background ');
-  //         aboutSectionBgEl.classList.add('slide-up');
-  //         observer.unobserve(entry.target);
-  //       }
-  //     });
-  //   });
-
-  //   observer.observe(servicesSectionEl);
-  // }
 
   // Awards animation
   if (awardSectionEl) {

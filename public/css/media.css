@@ -2,6 +2,10 @@
 /* ABOVE 1121px (LAPTOP) */
 /*****************************/
 @media (max-width: 70em) {
+  .logo-type {
+    display: none;
+  }
+
   section > .container,
   footer .container {
     width: 100rem;
@@ -191,6 +195,53 @@
 /* ABOVE 768px (TAB SMALL) */
 /*****************************/
 @media (max-width: 48em) {
+  .page-header .nav .menu-box .toggler-box {
+    margin-left: auto;
+    display: flex;
+  }
+
+  .nav__logo.bring-forward {
+    z-index: 2;
+  }
+
+  .logo-type {
+    display: block;
+  }
+
+  .nav__menu {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    height: 100vh;
+    /* background-color: rgba(0, 0, 0, 0.7); */
+    background-color: var(--primary-color);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    transform: translateX(-100%);
+    transition: all 1s ease-in-out;
+    /* opacity: 0; */
+    pointer-events: none;
+    visibility: hidden;
+  }
+
+  .nav__menu {
+    margin-top: 8rem;
+  }
+
+  .nav-open .nav__menu {
+    margin-right: -15.2rem;
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
   h1 {
     width: unset;
   }
@@ -217,6 +268,10 @@
 /* ABOVE 645px (PHONE) */
 /*****************************/
 @media (max-width: 41em) {
+  .logo-type {
+    display: none;
+  }
+
   section > .container,
   footer .container {
     width: 50rem;
@@ -298,5 +353,80 @@
 
   h2 {
     font-size: 2.6rem;
+  }
+
+  section > .container,
+  footer .container {
+    width: 40rem;
+  }
+
+  .about-section__item {
+    width: 40rem;
+  }
+
+  .about-section__background-box:nth-child(1) {
+    top: 26rem;
+  }
+
+  input[type='submit'] {
+    width: 100%;
+  }
+
+  .footer .footer-bottom p {
+    font-size: 1.4rem;
+  }
+}
+
+/*****************************/
+/* ABOVE 400px (PHONE) */
+/*****************************/
+@media (max-width: 25.4em) {
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  section > .container,
+  footer .container {
+    width: 32rem;
+  }
+
+  .about-section__item {
+    width: 32rem;
+  }
+
+  input[type='submit'] {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/*****************************/
+/* ABOVE 315px (PHONE) */
+/*****************************/
+@media (max-width: 25.4em) {
+  h1 {
+    font-size: 2.6rem;
+  }
+
+  section > .container,
+  footer .container {
+    width: 26rem;
+  }
+
+  .about-section__item {
+    width: 26rem;
+  }
+
+  .about-section__background-box:nth-child(1) {
+    top: 18rem;
+  }
+
+  .clients-section .clients {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-box .contact-container .contact-form.contact {
+    padding: 3.2rem;
   }
 }

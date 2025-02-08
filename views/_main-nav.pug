@@ -2,7 +2,7 @@ nav.nav
   .nav__logo
     img.logo-mark(src='/img/logo/logo-mark.svg')
     img.logo-type(src='/img/logo/logo-type.svg')
-  div.menu-box
+  .menu-box
     ul.nav__menu
       li.menu-item
         a#homeLink.menu-item__link(href='/')
@@ -22,6 +22,32 @@ nav.nav
       li.menu-item
         a#contactLink.menu-item__link(href='#contactSection')
           | CONTACT
-    .nav__other
-      .search-box 
-      .auth-box
+      li.nav__other
+        .search-box 
+        .auth-box
+    button.toggler-box
+      .menu__open
+        svg(width='45' height='45' viewbox='0 0 67.99 65.99' fill='none' xmlns='http://www.w3.org/2000/svg')
+          g#group-open-btn
+            rect.se(width='15.99' height='15.99' fill='#efd235' fill-rule='evenodd' transform='translate(0 50)')
+            rect.ss(width='15.99' height='15.99' fill='#efd235' fill-rule='evenodd' transform='translate(25.995 50)')
+            rect.sw(width='15.99' height='15.99' fill='#efd235' fill-rule='evenodd' transform='translate(51.98 50)')
+            rect.ww(width='15.99' height='15.99' fill='#efd235' fill-rule='evenodd' transform='translate(0 25)')
+            rect.cc(width='15.99' height='15.99' fill='#efd235' fill-rule='evenodd' transform='translate(25.995 25)')
+            rect.ee(width='15.99' height='15.99' fill='#efd235' fill-rule='evenodd' transform='translate(52 25)')
+            rect.ne(width='15.99' height='15.99' fill='#efd235' fill-rule='evenodd')
+            rect.nn(width='15.99' height='15.99' fill='#efd235' fill-rule='evenodd' transform='translate(25.995 0)')
+            rect.nw(width='15.99' height='15.99' fill='#efd235' fill-rule='evenodd' transform='translate(52 0)')
+
+        //- svg(width='45px' height='45px' viewbox='0 0 290 290' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg')
+        //-   g#group-open-btn
+        //-     path.se(d='M218 255C218 235.67 233.67 220 253 220C272.33 220 288 235.67 288 255C288 274.33 272.33 290 253 290C233.67 290 218 274.33 218 255L218 255Z' id='' fill='#efd235' fill-rule='evenodd' stroke='none')
+        //-     path.ss(d='M109 255C109 235.67 124.67 220 144 220C163.33 220 179 235.67 179 255C179 274.33 163.33 290 144 290C124.67 290 109 274.33 109 255L109 255Z' id='' fill='#efd235' fill-rule='evenodd' stroke='none')
+        //-     path.sw(d='M0 255C0 235.67 15.6701 220 35 220C54.3299 220 70 235.67 70 255C70 274.33 54.3299 290 35 290C15.6701 290 0 274.33 0 255L0 255Z' id='' fill='#efd235' fill-rule='evenodd' stroke='none')
+        //-     path.ww(d='M0 145C0 125.67 15.6701 110 35 110C54.3299 110 70 125.67 70 145C70 164.33 54.3299 180 35 180C15.6701 180 0 164.33 0 145L0 145Z' id='' fill='#efd235' fill-rule='evenodd' stroke='none')
+        //-     path.cc(d='M109 145C109 125.67 124.67 110 144 110C163.33 110 179 125.67 179 145C179 164.33 163.33 180 144 180C124.67 180 109 164.33 109 145L109 145Z' id='' fill='#efd235' fill-rule='evenodd' stroke='none')
+        //-     path.ee(d='M218 145C218 125.67 233.67 110 253 110C272.33 110 288 125.67 288 145C288 164.33 272.33 180 253 180C233.67 180 218 164.33 218 145L218 145Z' id='' fill='#efd235' fill-rule='evenodd' stroke='none')
+        //-     path.ne(d='M218 35C218 15.67 233.67 0 253 0C272.33 0 288 15.67 288 35C288 54.33 272.33 70 253 70C233.67 70 218 54.33 218 35L218 35Z' id='' fill='#efd235' fill-rule='evenodd' stroke='none')
+        //-     path.nn(d='M109 35C109 15.67 124.67 0 144 0C163.33 0 179 15.67 179 35C179 54.33 163.33 70 144 70C124.67 70 109 54.33 109 35L109 35Z' id='' fill='#efd235' fill-rule='evenodd' stroke='none')
+        //-     path.nw(d='M0 35C0 15.67 15.6701 0 35 0C54.3299 0 70 15.67 70 35C70 54.33 54.3299 70 35 70C15.6701 70 0 54.33 0 35L0 35Z' id='' fill='#efd235' fill-rule='evenodd' stroke='none')
+            
