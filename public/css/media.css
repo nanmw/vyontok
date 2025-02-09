@@ -14,6 +14,10 @@
   .about-section__info .about-content {
     width: 50rem;
   }
+
+  .project .project-cover {
+    padding: 3.2rem;
+  }
 }
 
 /*****************************/
@@ -300,9 +304,8 @@
   }
 
   .about-section__background-box:nth-child(1) {
-    left: 6rem;
-    top: 32rem;
-    width: 40%;
+    left: 0.5rem;
+    top: 20rem;
   }
 
   .about-section__background-box:nth-child(2) {
@@ -365,7 +368,7 @@
   }
 
   .about-section__background-box:nth-child(1) {
-    top: 26rem;
+    top: 14rem;
   }
 
   input[type='submit'] {
@@ -405,20 +408,30 @@
 /*****************************/
 @media (max-width: 25.4em) {
   h1 {
-    font-size: 2.6rem;
+    font-size: 2.4rem;
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 2rem;
   }
 
   section > .container,
   footer .container {
-    width: 26rem;
+    width: 100%;
+    padding: 0 0.7rem;
   }
 
   .about-section__item {
-    width: 26rem;
+    width: 100%;
   }
 
   .about-section__background-box:nth-child(1) {
-    top: 18rem;
+    top: 14rem;
+  }
+
+  .project .project-cover {
+    padding: 3.2rem;
   }
 
   .clients-section .clients {
@@ -428,5 +441,22 @@
 
   .contact-box .contact-container .contact-form.contact {
     padding: 3.2rem;
+  }
+}
+
+/*****************************/
+/* ABOVE 267px (PHONE) */
+/*****************************/
+@media (max-width: 22em) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .about-section__background-box:nth-child(1) {
+    top: 12rem;
+  }
+
+  .award .award__figure {
+    font-size: 2.4rem;
   }
 }

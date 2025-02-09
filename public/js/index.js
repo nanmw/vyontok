@@ -26,9 +26,11 @@ function scrollTo(clickedEl, viewEl) {
 
 document.addEventListener('DOMContentLoaded', function () {
   /******************************** ELEMENTS ********************************/
-  const navEl = document.querySelector(".nav");
-  const navLogoEl = document.querySelector(".nav__logo");
-  const menuTogglerEl = document.querySelector(".toggler-box");
+  const pageHeaderEl = document.querySelector('.page-header');
+  const navMenuEl = document.querySelector('.nav__menu');
+  const menuTogglerEl = document.querySelector('.toggler-box');
+  const menuSVGEl = document.querySelector('.toggler-box .menu__open svg');
+  const btnArrowDown = document.querySelector('.btn.btn--arrow.arrow-down svg');
   const videoEl = document.getElementById('myVideo');
   const meshEl = document.querySelector('.hero__mesh');
   const awardSectionEl = document.querySelector('.award-section');
@@ -50,12 +52,30 @@ document.addEventListener('DOMContentLoaded', function () {
   /******************************** NAVIGATION TOGGLE ********************************/
   // Menu toggle implementation
   menuTogglerEl.addEventListener("click", () => {
-    console.log("clicked");
-    const pageHeaderEl = document.querySelector(".page-header");
     pageHeaderEl.classList.toggle("nav-open");
-    navEl.classList.toggle("unblur");
 
-    navLogoEl.classList.add("bring-forward");
+  });
+
+  // Creating animations to certain objects if those objects are not interacted with.
+  document.addEventListener('click', function (e) {
+    // create a beating effect after 1 seconds if hamburger menu is not clicked.
+    if (e.target && !e.target.matches('.toggler-box .menu__open svg')) {
+      setTimeout(() => {
+        menuSVGEl.classList.add("beat");
+      }, 1000);
+    }
+
+    if (e.target && !e.target.matches('.btn.btn--arrow.arrow-down svg')) {
+      setTimeout(() => {
+        btnArrowDown.classList.add("slide-down");
+      }, 1000);
+    }
+  });
+
+  // Menu closed when menu box is opened.
+  navMenuEl.addEventListener("click", () => {
+    if (pageHeaderEl.classList.contains("nav-open"))
+      pageHeaderEl.classList.remove("nav-open");
   });
 
   meshEl.style.display = 'none';
