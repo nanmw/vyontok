@@ -142,17 +142,17 @@
 
   .about-section__background-box:nth-child(1) {
     left: -4.3rem;
-    top: 6rem;
+    top: 15rem;
     z-index: 2;
     width: 60%;
   }
   .about-section__background-box:nth-child(2) {
-    top: 0;
-    left: 26rem;
+    top: 72px;
+    left: 13rem;
     width: 60%;
   }
   .about-section__background-box:nth-child(3) {
-    bottom: 10rem;
+    bottom: 15rem;
     left: 43.5rem;
     width: 45%;
   }
@@ -304,14 +304,15 @@
   }
 
   .about-section__background-box:nth-child(1) {
-    left: 0.5rem;
-    top: 20rem;
+    left: 0;
+    top: -4rem;
+    width: 70%;
   }
 
   .about-section__background-box:nth-child(2) {
-    left: 4.8rem;
-    top: 0;
-    width: 80%;
+    left: 20.8rem;
+    top: 4rem;
+    width: 50%;
   }
 
   .about-section__background-box:nth-child(3) {
@@ -368,7 +369,7 @@
   }
 
   .about-section__background-box:nth-child(1) {
-    top: 14rem;
+    top: -5rem;
   }
 
   input[type='submit'] {
@@ -395,6 +396,10 @@
 
   .about-section__item {
     width: 32rem;
+  }
+
+  .about-section__background-box:nth-child(2) {
+    left: 17.8rem;
   }
 
   input[type='submit'] {
@@ -427,7 +432,7 @@
   }
 
   .about-section__background-box:nth-child(1) {
-    top: 14rem;
+    top: -5rem;
   }
 
   .project .project-cover {
@@ -453,7 +458,7 @@
   }
 
   .about-section__background-box:nth-child(1) {
-    top: 12rem;
+    top: -5rem;
   }
 
   .award .award__figure {
