@@ -544,6 +544,7 @@ section > .container > header {
   margin-top: 100rem;
   opacity: 0;
   transition: opacity 1s ease-in-out;
+  background-color: var(--background-light);
 }
 
 .about-section__background-box.active {
