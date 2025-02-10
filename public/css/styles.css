@@ -132,6 +132,7 @@ section > .container,
 footer .container {
   width: 120rem;
   margin: 0 auto;
+  background-color: #ffffff;
 }
 
 img {
@@ -253,6 +254,11 @@ section > .container > header {
 }
 
 /******************************************************** LANDING PAGE *********************************************************/
+main {
+  position: relative;
+  background-color: var(--background-light);
+  z-index: -2;
+}
 /* LANDING PAGE - HERO */
 .page-header {
   position: relative;
@@ -475,6 +481,7 @@ section > .container > header {
   display: flex;
   margin: 0;
   width: unset;
+  background-color: unset;
 }
 
 .about-section .container h2 {
@@ -586,7 +593,8 @@ section > .container > header {
 }
 
 /* LANDING PAGE - AWARD SECTION */
-.award-section {
+.award-section,
+.award-section .container {
   background-color: var(--accent-color);
 }
 
@@ -746,7 +754,8 @@ section > .container > header {
 }
 
 /* LANDING PAGE - CLIENTS SECTION */
-.clients-section {
+.clients-section,
+.clients-section .container {
   background-color: var(--background-light);
 }
 
@@ -872,6 +881,11 @@ textarea {
 .footer .footer-body .container {
   display: flex;
   gap: 4.8rem;
+  background-color: var(--background-light);
+}
+
+.footer .footer-bottom .container {
+  background-color: var(--primary-color);
 }
 
 .footer-body .footer-body__item {
