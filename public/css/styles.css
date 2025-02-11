@@ -254,11 +254,11 @@ section > .container > header {
 }
 
 /******************************************************** LANDING PAGE *********************************************************/
-main {
+/* main {
   position: relative;
   background-color: var(--background-light);
-  z-index: -2;
-}
+} */
+
 /* LANDING PAGE - HERO */
 .page-header {
   position: relative;
