@@ -771,11 +771,13 @@ section > .container > header {
   justify-content: center;
 }
 
+.clients-section .clients .client img,
 .clients-section .clients .client svg {
   filter: grayscale(100%); /* Apply grayscale */
   transition: filter 0.3s ease; /* Smooth transition */
 }
 
+.clients-section .clients .client img:hover,
 .clients-section .clients .client svg:hover {
   filter: grayscale(0%); /* Remove grayscale on hover */
 }

@@ -17,7 +17,7 @@ function scrollTo(clickedEl, viewEl) {
   clickedEl.addEventListener('click', function (e) {
     e.preventDefault();
     window.scrollTo({
-      top: viewEl.offsetTop - 89.59, // Adjust based on your fixed nav height
+      top: viewEl.offsetTop - 89, // Adjust based on your fixed nav height
       behavior: "smooth"
     });
   });

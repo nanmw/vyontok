@@ -15,6 +15,11 @@
     width: 50rem;
   }
 
+  .services-box .services {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
   .project .project-cover {
     padding: 3.2rem;
   }
@@ -100,6 +105,7 @@
     object-fit: initial;
     position: static;
     top: auto;
+    border: 0.6rem #f9f9fc solid;
   }
 
   .about-section__background-box {
